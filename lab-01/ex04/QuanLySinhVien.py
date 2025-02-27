@@ -72,7 +72,7 @@ class StudentManager:
             student._academicPerformance = "Trung Binh"
         else:
             student._academicPerformance = "Yeu"
-    def showListStudent(self):
+    def showAllStudent(self):
         print("{:<5} {:<20} {:<10} {:<20} {:<10} {:<10}".format("ID", "Ten", "Gioi Tinh", "Nganh Hoc", "Diem TB", "Hoc Luc"))
         for student in self.listStudent:
             print("{:<5} {:<20} {:<10} {:<20} {:<10} {:<10}".format(student._id, student._name, student._sex, student._major, student._avgScore, student._academicPerformance))
