@@ -1,6 +1,21 @@
 from QuanLySinhVien import StudentManager
+from QuanLySinhVien import Student
 
 stdmng = StudentManager()
+
+#Tạo dữ liệu mẫu
+std1 = Student(1, "Nguyen Van A", "Nam", "CNTT", 8.5)
+std2 = Student(2, "Tran Thi B", "Nu", "CNTT", 7.5)
+std3 = Student(3, "Le Van C", "Nam", "CNTT", 9.0)
+std4 = Student(4, "Pham Thi D", "Nu", "CNTT", 6.5)
+std5 = Student(5, "Hoang Van E", "Nam", "CNTT", 7.0)
+stdmng.listStudent.append(std1)
+stdmng.listStudent.append(std2)
+stdmng.listStudent.append(std3)
+stdmng.listStudent.append(std4)
+stdmng.listStudent.append(std5)
+#Kết thúc tạo dữ liệu mẫu
+
 while (1 == 1):
     print("\n CHUONG TRINH QUAN LY SINH VIEN \n")
     print("Menu: ")
@@ -67,3 +82,4 @@ while (1 == 1):
         break
     else:
         print("Lua chon khong hop le! Hay chon chuc nang trong menu!")
+# End of file

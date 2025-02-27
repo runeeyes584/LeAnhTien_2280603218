@@ -24,7 +24,7 @@ class StudentManager:
     
     def updateStudent(self, ID):
         stdnt:Student = self.findByID(ID)
-        if stdnt == None:
+        if stdnt != None:
             name = input("Nhap ten sinh vien: ")
             sex = input("Nhap gioi tinh: ")
             major = input("Nhap nganh hoc: ")
@@ -34,7 +34,7 @@ class StudentManager:
             stdnt.major = major
             stdnt.avgScore = avgScore
             self.RankingEducation(stdnt)
-        else: 
+        else:
             print("Sinh vien co ID = {} khong ton tai".format(ID))
             
     def sortByID(self):
@@ -44,7 +44,7 @@ class StudentManager:
         self.listStudent.sort(key=lambda x: x._name, reverse=False)
         
     def sortByAvgScore(self):
-        self.listStudent.sort(key=lambda x: x.avgScore, reverse=False)
+        self.listStudent.sort(key=lambda x: x._avgScore, reverse=False)
         
     def findByID(self, ID):
         serchResult = None
@@ -75,8 +75,6 @@ class StudentManager:
     def showAllStudent(self):
         print("{:<5} {:<20} {:<10} {:<20} {:<10} {:<10}".format("ID", "Ten", "Gioi Tinh", "Nganh Hoc", "Diem TB", "Hoc Luc"))
         for student in self.listStudent:
-            print("{:<5} {:<20} {:<10} {:<20} {:<10} {:<10}".format(student._id, student._name, student._sex, student._major, student._avgScore, student._academicPerformance))
-            print("\n")
-    
+            print("{:<5} {:<20} {:<10} {:<20} {:<10} {:<10}".format(student._id, student._name, student._sex, student._major, student._avgScore, student._academicPerformance))    
     def getListStudent(self):
         return self.listStudent
